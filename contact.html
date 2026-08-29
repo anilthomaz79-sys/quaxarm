@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us | Quaxarm</title>
+    <meta
+      name="description"
+      content="Contact Quaxarm Technologies in Kochi. Email contact@quaxarm.com or send a message through this form."
+    />
+    <link rel="icon" href="assets/brand/mark.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="page-bg"></div>
+    <header class="site-header">
+      <div class="wrap nav">
+        <a class="brand" href="index.html" aria-label="Quaxarm home">
+          <img class="mark" src="assets/brand/mark.png" alt="" />
+          <img class="wordmark" src="assets/brand/logo.png" alt="Quaxarm" />
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu">☰</button>
+        <nav class="nav-links">
+          <a data-nav href="index.html">Home</a>
+          <a data-nav href="about.html">About</a>
+          <a data-nav href="capabilities.html">Capabilities</a>
+          <a data-nav href="team.html">Team</a>
+          <a class="btn btn-primary" href="contact.html">Contact us</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="page-hero">
+        <div class="eyebrow">Contact</div>
+        <h1>We look forward to partnering on your next step in technology.</h1>
+        <p class="lede">
+          Send a note through the form and it arrives at contact@quaxarm.com. You can also call or write
+          to us directly.
+        </p>
+      </section>
+
+      <section class="contact-layout">
+        <div class="contact-meta">
+          <a class="contact-item" href="mailto:contact@quaxarm.com">
+            <img src="assets/brand/icon-email.png" alt="" />
+            <div>
+              <span>Email</span>
+              <strong>contact@quaxarm.com</strong>
+            </div>
+          </a>
+          <a class="contact-item" href="tel:+919489791125">
+            <img src="assets/brand/icon-phone.png" alt="" />
+            <div>
+              <span>Phone</span>
+              <strong>+91 94897 91125</strong>
+            </div>
+          </a>
+          <div class="contact-item">
+            <img src="assets/brand/icon-location.png" alt="" />
+            <div>
+              <span>Office</span>
+              <strong>Kochi, Kerala, India</strong>
+            </div>
+          </div>
+        </div>
+
+        <form id="contact-form" class="form" novalidate>
+          <input type="hidden" name="_subject" value="New enquiry from the Quaxarm website" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input class="honey" type="text" name="_honey" tabindex="-1" autocomplete="off" />
+
+          <div class="form-row">
+            <label>
+              Full name
+              <input name="name" type="text" required autocomplete="name" />
+            </label>
+            <label>
+              Work email
+              <input name="email" type="email" required autocomplete="email" />
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              Organisation
+              <input name="organisation" type="text" autocomplete="organization" />
+            </label>
+            <label>
+              Phone
+              <input name="phone" type="tel" autocomplete="tel" />
+            </label>
+          </div>
+          <label>
+            How can we help?
+            <textarea name="message" required placeholder="Tell us about the programme, timeline, and what success looks like."></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Send message</button>
+          <div id="form-status" class="form-status" role="status"></div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-row">
+        <div>© <span data-year></span> Quaxarm Technologies. Kochi, Kerala, India.</div>
+        <div>
+          <a href="mailto:contact@quaxarm.com">contact@quaxarm.com</a>
+          ·
+          <a href="tel:+919489791125">+91 94897 91125</a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/site.js"></script>
+  </body>
+</html>
