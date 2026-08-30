@@ -20,6 +20,11 @@
   const year = document.querySelector("[data-year]");
   if (year) year.textContent = String(new Date().getFullYear());
 
+  document.querySelectorAll("main section, .cta-band, .product").forEach((el, i) => {
+    el.style.animationDelay = `${Math.min(i * 0.06, 0.3)}s`;
+    el.classList.add("reveal");
+  });
+
   const form = document.querySelector("#contact-form");
   const status = document.querySelector("#form-status");
   if (!form || !status) return;
