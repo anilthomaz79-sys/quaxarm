@@ -762,8 +762,27 @@ select:focus {
   display: none;
 }
 
-.qa-panel {
-  display: none;
+.qa-backdrop,
+.qa-backdrop[hidden] {
+  display: none !important;
+}
+
+.qa.is-open .qa-backdrop {
+  display: block !important;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+
+.qa-panel,
+.qa-panel[hidden] {
+  display: none !important;
+}
+
+.qa.is-open .qa-panel {
+  display: flex !important;
   width: min(380px, calc(100vw - 32px));
   height: min(540px, calc(100vh - 48px));
   flex-direction: column;
@@ -772,10 +791,8 @@ select:focus {
   background: #0c0c12;
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
   overflow: hidden;
-}
-
-.qa.is-open .qa-panel {
-  display: flex;
+  position: relative;
+  z-index: 1;
 }
 
 .qa-head {
@@ -785,6 +802,12 @@ select:focus {
   gap: 12px;
   padding: 16px 16px 8px;
   border-bottom: 1px solid var(--line);
+}
+
+.qa-head > div {
+  min-width: 0;
+  flex: 1 1 auto;
+  pointer-events: none;
 }
 
 .qa-kicker {
@@ -806,21 +829,26 @@ select:focus {
 
 .qa-close {
   flex: 0 0 auto;
-  width: 36px;
-  height: 36px;
-  border: 0;
-  border-radius: 10px;
-  background: transparent;
-  color: var(--muted);
-  font-size: 1.4rem;
+  position: relative;
+  z-index: 5;
+  pointer-events: auto;
+  min-height: 36px;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
   line-height: 1;
   cursor: pointer;
-  z-index: 1;
 }
 
 .qa-close:hover {
   color: var(--text);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(196, 181, 253, 0.45);
 }
 
 .qa-note {

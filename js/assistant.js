@@ -362,6 +362,7 @@
   function init() {
     const root = el("div", "qa");
     root.innerHTML = `
+      <div class="qa-backdrop" data-qa-close hidden></div>
       <button class="qa-launch" type="button" aria-expanded="false" aria-controls="qa-panel" aria-label="Ask about Quaxarm">
         <span class="qa-launch-icon" aria-hidden="true">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
@@ -376,7 +377,7 @@
             <p class="qa-kicker">Site guide</p>
             <h2>Ask about Quaxarm</h2>
           </div>
-          <button class="qa-close" type="button" aria-label="Close">×</button>
+          <button class="qa-close" type="button" data-qa-close aria-label="Close the site guide">Close</button>
         </header>
         <p class="qa-note">Answers come from this website. For a programme, use Contact.</p>
         <div class="qa-log" role="log" aria-live="polite"></div>
@@ -392,7 +393,7 @@
 
     const launch = root.querySelector(".qa-launch");
     const panel = root.querySelector(".qa-panel");
-    const close = root.querySelector(".qa-close");
+    const backdrop = root.querySelector(".qa-backdrop");
     const log = root.querySelector(".qa-log");
     const form = root.querySelector(".qa-form");
     const input = root.querySelector("#qa-input");
@@ -453,6 +454,7 @@
     function open() {
       root.classList.add("is-open");
       panel.hidden = false;
+      backdrop.hidden = false;
       panel.setAttribute("aria-hidden", "false");
       launch.setAttribute("aria-expanded", "true");
       if (!log.childElementCount) {
@@ -468,16 +470,25 @@
     function shut() {
       root.classList.remove("is-open");
       panel.hidden = true;
+      backdrop.hidden = true;
       panel.setAttribute("aria-hidden", "true");
       launch.setAttribute("aria-expanded", "false");
-      launch.focus();
     }
 
-    launch.addEventListener("click", () => (isOpen() ? shut() : open()));
-    close.addEventListener("click", (event) => {
+    function onClose(event) {
       event.preventDefault();
       event.stopPropagation();
       shut();
+    }
+
+    launch.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      if (isOpen()) shut();
+      else open();
+    });
+    root.addEventListener("pointerdown", (event) => {
+      if (event.target.closest("[data-qa-close]")) onClose(event);
     });
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && isOpen()) shut();
