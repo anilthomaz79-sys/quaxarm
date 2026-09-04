@@ -718,6 +718,231 @@ select:focus {
   }
 }
 
+.qa {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 80;
+  font-family: var(--font);
+}
+
+.qa-launch {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  background: rgba(12, 12, 18, 0.92);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 10px 16px 10px 12px;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(16px);
+}
+
+.qa-launch:hover {
+  border-color: rgba(196, 181, 253, 0.35);
+  background: rgba(18, 16, 28, 0.96);
+}
+
+.qa-launch-icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ece8ff;
+  color: var(--ink);
+}
+
+.qa.is-open .qa-launch {
+  display: none;
+}
+
+.qa-panel {
+  width: min(380px, calc(100vw - 32px));
+  height: min(540px, calc(100vh - 48px));
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: #0c0c12;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+.qa-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 16px 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+.qa-kicker {
+  margin: 0 0 4px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.qa-head h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+.qa-close {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.qa-close:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.qa-note {
+  margin: 0;
+  padding: 10px 16px 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.qa-log {
+  flex: 1;
+  overflow: auto;
+  padding: 12px 16px;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+
+.qa-msg {
+  max-width: 92%;
+  padding: 10px 12px;
+  border-radius: 14px;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.qa-msg p {
+  margin: 0;
+}
+
+.qa-msg-bot {
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: var(--text);
+}
+
+.qa-msg-user {
+  justify-self: end;
+  background: #ece8ff;
+  color: var(--ink);
+}
+
+.qa-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.qa-link,
+.qa-chip {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 5px 10px;
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.qa-link:hover,
+.qa-chip:hover {
+  border-color: rgba(196, 181, 253, 0.45);
+  background: rgba(196, 181, 253, 0.08);
+}
+
+.qa-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 16px 10px;
+}
+
+.qa-form {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.qa-form input {
+  flex: 1;
+  min-width: 0;
+}
+
+.qa-send {
+  border: 0;
+  border-radius: 12px;
+  padding: 0 14px;
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 600;
+  background: #ece8ff;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.qa-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+@media (max-width: 900px) {
+  .qa {
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .qa-launch-label {
+    display: none;
+  }
+
+  .qa-launch {
+    padding: 8px;
+  }
+
+  .qa-panel {
+    width: min(100vw - 28px, 400px);
+    height: min(72vh, 560px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -725,7 +950,9 @@ select:focus {
 
   .reveal,
   .card,
-  .btn {
+  .btn,
+  .qa-launch,
+  .qa-panel {
     animation: none;
     transition: none;
     opacity: 1;
