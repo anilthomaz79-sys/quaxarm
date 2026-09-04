@@ -763,15 +763,19 @@ select:focus {
 }
 
 .qa-panel {
+  display: none;
   width: min(380px, calc(100vw - 32px));
   height: min(540px, calc(100vh - 48px));
-  display: flex;
   flex-direction: column;
   border: 1px solid var(--line);
   border-radius: 22px;
   background: #0c0c12;
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
   overflow: hidden;
+}
+
+.qa.is-open .qa-panel {
+  display: flex;
 }
 
 .qa-head {
@@ -801,6 +805,7 @@ select:focus {
 }
 
 .qa-close {
+  flex: 0 0 auto;
   width: 36px;
   height: 36px;
   border: 0;
@@ -810,6 +815,7 @@ select:focus {
   font-size: 1.4rem;
   line-height: 1;
   cursor: pointer;
+  z-index: 1;
 }
 
 .qa-close:hover {

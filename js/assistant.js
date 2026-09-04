@@ -370,7 +370,7 @@
         </span>
         <span class="qa-launch-label">Ask Quaxarm</span>
       </button>
-      <section id="qa-panel" class="qa-panel" hidden>
+      <section id="qa-panel" class="qa-panel" hidden aria-hidden="true">
         <header class="qa-head">
           <div>
             <p class="qa-kicker">Site guide</p>
@@ -446,10 +446,15 @@
       input.focus();
     }
 
+    function isOpen() {
+      return root.classList.contains("is-open");
+    }
+
     function open() {
-      panel.hidden = false;
-      launch.setAttribute("aria-expanded", "true");
       root.classList.add("is-open");
+      panel.hidden = false;
+      panel.setAttribute("aria-hidden", "false");
+      launch.setAttribute("aria-expanded", "true");
       if (!log.childElementCount) {
         add("bot", {
           answer:
@@ -461,16 +466,21 @@
     }
 
     function shut() {
-      panel.hidden = true;
-      launch.setAttribute("aria-expanded", "false");
       root.classList.remove("is-open");
+      panel.hidden = true;
+      panel.setAttribute("aria-hidden", "true");
+      launch.setAttribute("aria-expanded", "false");
       launch.focus();
     }
 
-    launch.addEventListener("click", () => (panel.hidden ? open() : shut()));
-    close.addEventListener("click", shut);
+    launch.addEventListener("click", () => (isOpen() ? shut() : open()));
+    close.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      shut();
+    });
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && !panel.hidden) shut();
+      if (event.key === "Escape" && isOpen()) shut();
     });
 
     form.addEventListener("submit", (event) => {
