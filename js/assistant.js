@@ -231,7 +231,7 @@
         "hq",
       ],
       answer:
-        "The office is in Kochi, Kerala, India. The team is India-based with global delivery experience. For a programme conversation, email is usually the fastest start.",
+        "Programmes and solutions can be delivered anywhere in the world. For a conversation, email is usually the fastest start.",
       links: [{ href: CONTACT, label: "Contact" }],
     },
   ];
