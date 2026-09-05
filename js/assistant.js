@@ -94,10 +94,10 @@
         "estate",
       ],
       answer:
-        "We work wherever operations, data, identity, and customer experience have to move together. Core sectors: education; travel and hospitality; healthcare and life sciences; marine, logistics and supply chain; financial services; public sector and enterprise; manufacturing and operations; retail and consumer. The same stack also fits insurers, energy and utilities, real estate, and professional services.",
+        "Specialty is education, healthcare, and marine logistics — environments where failure is expensive. Adjacent sectors (travel, financial services, public sector, manufacturing, retail, and others) are taken when the operating constraint is the same, not as eight equal claims.",
       links: [
         { href: "index.html", label: "Home" },
-        { href: "capabilities.html", label: "By sector" },
+        { href: "about.html", label: "About" },
       ],
     },
     {
@@ -224,7 +224,7 @@
       answer:
         "Email " +
         EMAIL +
-        ". There is a form on the Contact page; messages go to the same inbox. The legal name is Quaxarm Technologies LLP. We do not publish a rate card — tell us the programme, the constraint, and what a useful next twelve months would look like.",
+        ". There is a form on the Contact page. The legal name is Quaxarm Technologies LLP. Privacy and website terms are linked in the footer. We do not publish a rate card — a twenty-minute intro is enough to start.",
       links: [{ href: CONTACT, label: "Contact page" }],
     },
     {
