@@ -92,12 +92,15 @@
         "utilities",
         "real",
         "estate",
+        "workforce",
+        "staffing",
+        "manpower",
       ],
       answer:
-        "Specialty is education, healthcare, and marine logistics — environments where failure is expensive. Adjacent sectors (travel, financial services, public sector, manufacturing, retail, and others) are taken when the operating constraint is the same, not as eight equal claims.",
+        "We work wherever operations, data, identity, and customer experience have to move together. Core sectors: education; travel and hospitality; healthcare and life sciences; marine, logistics and supply chain; financial services; public sector and enterprise; manufacturing and operations; retail and consumer. The same stack also fits insurers, energy and utilities, real estate, professional services, and workforce and staffing businesses.",
       links: [
         { href: "index.html", label: "Home" },
-        { href: "about.html", label: "About" },
+        { href: "capabilities.html", label: "By sector" },
       ],
     },
     {
