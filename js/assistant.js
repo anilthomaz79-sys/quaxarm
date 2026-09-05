@@ -1,13 +1,13 @@
 (function () {
   const CONTACT = "contact.html";
   const EMAIL = "contact@quaxarm.com";
-  const PHONE = "+91 94897 91125";
 
   const topics = [
     {
       id: "about",
       title: "What Quaxarm does",
       keywords: [
+        "llp",
         "quaxarm",
         "company",
         "about",
@@ -22,7 +22,7 @@
         "help",
       ],
       answer:
-        "Quaxarm Technologies is a digital-native firm. We help operators modernise the systems that run the business: products customers and staff use, infrastructure that must not fail, identity that keeps the estate safe, and applied AI on real operational data. Delivery is senior-led — from strategy through to a system that holds after go-live.",
+        "Quaxarm Technologies LLP is a digital-native firm. We help operators modernise the systems that run the business: products customers and staff use, infrastructure that must not fail, identity that keeps the estate safe, and AI on operational data. Delivery is senior-led — from strategy through to a system that holds after go-live.",
       links: [
         { href: "about.html", label: "About" },
         { href: "capabilities.html", label: "Capabilities" },
@@ -115,9 +115,15 @@
         "student",
         "booking",
         "provider",
+        "deploy",
+        "tenant",
+        "credential",
+        "local",
+        "permission",
+        "store",
       ],
       answer:
-        "Testora is Quaxarm’s digital assessment product. Exam centres, candidates, and exam providers work in one platform instead of spreadsheets and phone calls. It covers centre operations (bookings, payments, inventory, multi-site control), a clearer candidate booking journey, provider visibility and audit trails, and matching unused capacity between centres.",
+        "Testora is Quaxarm’s digital assessment product. Exam centres, candidates, and exam providers work in one platform instead of spreadsheets and phone calls. It is deployed in the client’s environment; access and data handling follow that organisation’s security framework. Quaxarm does not store the client’s operational data or credentials. The product has been tested; implementation with prospective clients is planned.",
       links: [
         { href: "products.html", label: "Products" },
         { href: CONTACT, label: "Ask about Testora" },
@@ -139,9 +145,17 @@
         "vulnerabilities",
         "readiness",
         "subscription",
+        "deploy",
+        "tenant",
+        "credential",
+        "cli",
+        "local",
+        "store",
+        "permission",
+        "checklist",
       ],
       answer:
-        "Aegis connects to an Azure environment you grant it and answers three operating questions in one view: is the estate costing more than it should, are Microsoft Defender vulnerabilities known but not owned, and are resources actually ready for the load you intend? It is built for architecture, security, and finance conversations that today live in three different portals.",
+        "Aegis is deployed in the client’s Azure environment. It can be explored locally without Azure. Cost, Defender, and checklist modules talk to Azure only after the client provides a subscription and signs in with their own credentials (Azure CLI, device code, or Azure’s default credential chain). Quaxarm does not store credentials or Azure data. The product has been tested; implementation with prospective clients is planned.",
       links: [
         { href: "products.html", label: "Products" },
         { href: CONTACT, label: "Ask about Aegis" },
@@ -152,7 +166,7 @@
       title: "Products",
       keywords: ["products", "product", "flagship", "software"],
       answer:
-        "Two products are live today. Testora is an end-to-end digital assessment platform for exam centres, candidates, and exam providers. Aegis connects to Azure to surface cost optimisation, Microsoft Defender vulnerabilities, and resource readiness.",
+        "Two products have been tested, with implementation planned with prospective clients. Testora is a digital assessment platform for exam centres, candidates, and providers. Aegis runs in the client’s Azure environment for cost, Defender, and checklists. Neither stores client data at Quaxarm.",
       links: [{ href: "products.html", label: "Products" }],
     },
     {
@@ -210,9 +224,7 @@
       answer:
         "Email " +
         EMAIL +
-        " or call " +
-        PHONE +
-        ". There is a form on the Contact page; messages go to the same inbox. We do not publish a rate card — tell us the programme, the constraint, and what a useful next twelve months would look like.",
+        ". There is a form on the Contact page; messages go to the same inbox. The legal name is Quaxarm Technologies LLP. We do not publish a rate card — tell us the programme, the constraint, and what a useful next twelve months would look like.",
       links: [{ href: CONTACT, label: "Contact page" }],
     },
     {

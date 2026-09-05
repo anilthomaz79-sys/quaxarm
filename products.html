@@ -6,7 +6,7 @@
     <title>Products | Quaxarm</title>
     <meta
       name="description"
-      content="Quaxarm flagship products: Testora for digital examinations, and Aegis for Azure cost, Defender vulnerabilities, and resource readiness."
+      content="Testora and Aegis from Quaxarm Technologies LLP: tested products deployed in the client’s environment for examinations and Azure cost, Defender, and checklists."
     />
     <meta name="theme-color" content="#07070b" />
     <link rel="icon" href="assets/brand/logo.png" />
@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=3" />
+    <link rel="stylesheet" href="css/styles.css?v=4" />
   </head>
   <body>
     <div class="page-bg"></div>
@@ -40,10 +40,12 @@
     <main class="wrap">
       <section class="page-hero">
         <div class="eyebrow">Flagship products</div>
-        <h1>Software already in the field, not a slide about what we might build.</h1>
+        <h1>Products built to run in the client’s environment.</h1>
         <p class="lede">
-          Alongside client programmes, Quaxarm designs and operates its own products. Two are live today:
-          Testora for the digital examination ecosystem, and Aegis for Azure cost, security, and readiness.
+          Testora and Aegis have been tested. Implementation with prospective clients is planned.
+          Both are deployed into the client’s estate, authenticated with the client’s own credentials,
+          and aligned to that organisation’s security framework. Quaxarm Technologies LLP does not
+          store client operational data or credentials.
         </p>
       </section>
 
@@ -74,6 +76,14 @@
               <li>Asset matching: share or trade capacity between centres instead of leaving it unused</li>
               <li>Transparency: pricing history, compliance support, and operational reporting</li>
             </ul>
+            <div class="panel product-trust">
+              <div class="kicker">Deployment and data</div>
+              <p>
+                Testora is deployed into the client’s environment. Sign-in, access, and data handling follow
+                that organisation’s security framework and identity — not a Quaxarm-hosted copy of the estate.
+                Quaxarm does not store the client’s operational data or credentials.
+              </p>
+            </div>
           </div>
         </article>
 
@@ -82,9 +92,9 @@
             <div class="kicker">Azure estate intelligence</div>
             <h2>Aegis</h2>
             <p class="lede">
-              Aegis connects to your Azure environment and shows whether the estate is costing more than it
-              should, whether Defender is raising vulnerabilities you have not cleared, and whether resources
-              are actually ready for the load you intend to put on them.
+              Aegis runs in your Azure environment, with your credentials, and shows whether the estate is
+              costing more than it should, whether Defender is raising vulnerabilities you have not cleared,
+              and whether resources are ready for the load you intend to put on them.
             </p>
             <a class="btn btn-ghost" href="contact.html">Ask about Aegis</a>
           </div>
@@ -98,9 +108,24 @@
             <ul>
               <li>Cost optimisation — idle, oversized, or poorly tagged resources that inflate spend</li>
               <li>Microsoft Defender vulnerabilities — exposure that is known in the tenant but not yet owned</li>
-              <li>Resource readiness — whether compute, network, and configuration are fit for purpose</li>
+              <li>Azure checklists — build and VM readiness checks against the subscription the client provides</li>
               <li>A single view for architecture, security, and finance conversations</li>
             </ul>
+            <div class="panel product-trust">
+              <div class="kicker">Deployment, authentication, and data</div>
+              <p>
+                Aegis is deployed in the client’s Azure environment. It can be explored locally without an Azure
+                connection. Cost, Defender, and checklist modules talk to Azure only after the client provides a
+                subscription and authenticates with their own credentials — Azure CLI after sign-in, device code,
+                or Azure’s default credential chain. Connection is optional and used only when the client supplies
+                a subscription.
+              </p>
+              <p>
+                Authentication is the client’s identity, not a Quaxarm login. Quaxarm does not store client
+                credentials or Azure data. Access and controls stay inside the client’s tenant and security
+                framework; when the client revokes their own access, Aegis cannot see the estate.
+              </p>
+            </div>
           </div>
         </article>
       </section>
@@ -116,15 +141,13 @@
 
     <footer class="site-footer">
       <div class="wrap footer-row">
-        <div>© <span data-year></span> Quaxarm Technologies</div>
+        <div>© 2026 Quaxarm Technologies LLP</div>
         <div>
           <a href="mailto:contact@quaxarm.com">contact@quaxarm.com</a>
-          ·
-          <a href="tel:+919489791125">+91 94897 91125</a>
         </div>
       </div>
     </footer>
     <script src="js/site.js"></script>
-    <script src="js/assistant.js?v=4"></script>
+    <script src="js/assistant.js?v=5"></script>
   </body>
 </html>
