@@ -124,7 +124,7 @@
         "hosted",
       ],
       answer:
-        "Testora is Quaxarm’s digital assessment product, offered on a subscription basis. Exam centres, candidates, and exam providers work in one platform instead of spreadsheets and phone calls. Clients subscribe and use the features as a service; it is not installed into the client’s own environment. Client information is treated as confidential and used only to provide the service. The product has been tested; implementation with prospective clients is planned.",
+        "Testora is Quaxarm’s digital assessment product, offered on a subscription basis. Exam centres, candidates, and exam providers work in one platform instead of spreadsheets and phone calls. Clients subscribe and use the features as a service. Client information is treated as confidential and used only to provide the service. The product has been tested; implementation with prospective clients is planned.",
       links: [
         { href: "products.html", label: "Products" },
         { href: CONTACT, label: "Ask about Testora" },
