@@ -450,6 +450,17 @@ a {
   letter-spacing: -0.03em;
 }
 
+.product-demo {
+  display: block;
+  width: 100%;
+  margin-top: 22px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: #07070b;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
 .phase {
   display: grid;
   grid-template-columns: 150px 1fr;
