@@ -219,6 +219,8 @@
         "contact",
         "email",
         "phone",
+        "mobile",
+        "australia",
         "call",
         "talk",
         "meet",
@@ -234,7 +236,7 @@
       answer:
         "Email " +
         EMAIL +
-        ". There is a form on the Contact page. The legal name is Quaxarm Technologies LLP. Privacy and website terms are linked in the footer. We do not publish a rate card — a twenty-minute intro is enough to start.",
+        ", or call +61 408 645 65 (Australia) or +91 94897 91125 (India). There is a form on the Contact page. The legal name is Quaxarm Technologies LLP. Privacy and website terms are linked in the footer. We do not publish a rate card — a twenty-minute intro is enough to start.",
       links: [{ href: CONTACT, label: "Contact page" }],
     },
     {
